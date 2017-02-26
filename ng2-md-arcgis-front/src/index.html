@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ng2MdArcgisCli</title>
+  <base href="/">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      height: 95%;
+    }
+
+    .esri-popup {
+      display: none;
+    }
+
+    .esri-view-surface > .esri-display-object div:nth-child(2) {
+      z-index: 9999999999;
+    }
+
+    svg image:hover{
+      cursor: pointer;
+      stroke-width: 4px;
+    }
+  </style>
+
+  <script defer src="https://js.arcgis.com/4.0/"></script>
+  <script defer src="assets/lib/arcgis.js"></script>
+</head>
+<body>
+  <app-root>Loading...</app-root>
+</body>
+</html>

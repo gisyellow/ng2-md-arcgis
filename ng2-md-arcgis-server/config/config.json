@@ -1,0 +1,10 @@
+{
+  "mongodb": {
+    "test": {
+      "url": "mongodb://localhost/points"
+    },
+    "prod": {
+      "url": "mongodb://localhost/points"
+    }
+  }
+}

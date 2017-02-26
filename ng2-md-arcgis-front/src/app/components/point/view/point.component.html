@@ -1,0 +1,28 @@
+<div id="point-component" [hidden]="hiddenComponent" style="text-align: center">
+	<md-card>
+		<md-card-content>
+
+			<div class="error" [hidden]="!error">
+				<md-icon>error</md-icon>
+				{{error}}
+			</div>
+			<div [hidden]="error">
+				<h2 md-line>
+					{{point?.firstName}} {{point?.lastName}}
+				</h2>
+
+				<h4>{{point?.address}}</h4>
+			</div>
+
+			<div class="button-hub">
+				<a md-raised-button href="/point/detail/{{point?._id}}">
+					<md-icon>mode_edit</md-icon>
+					Edit
+				</a>
+				<button (click)="closePointComponent()" md-raised-button color="primary">Close</button>
+			</div>
+			<div style="clear: both"></div>
+
+		</md-card-content>
+	</md-card>
+</div>

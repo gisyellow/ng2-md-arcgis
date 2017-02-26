@@ -1,0 +1,35 @@
+button {
+	margin-left: 10px;
+	background-color: lightgreen;
+}
+
+#title {
+	text-align: center;
+	margin-bottom: 5px ;
+}
+
+md-icon {
+	vertical-align: middle;
+}
+
+.message {
+	text-align: left;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-100px 0 0 -150px;
+	max-width: 400px;
+	max-height: 300px;
+	z-index: 20;
+}
+
+
+#button-panel {
+	margin-bottom: 10px;
+	text-align: center
+}
+
+html,
+body {
+	height: 100%;
+}

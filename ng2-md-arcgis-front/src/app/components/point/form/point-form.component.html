@@ -1,0 +1,66 @@
+<div class="form" [hidden]="hiddenForm">
+	<md-card>
+		<md-card-content>
+			<div [hidden]="submitted">
+				<md-list>
+					<div class="address">
+						<i>{{point.address}}</i>
+					</div>
+					<p *ngIf="formError" class="error">
+						<md-icon>error</md-icon>
+						{{formError}}
+					</p>
+				</md-list>
+				<form id="point-form" onsubmit="return false">
+					<div class="column">
+						<md-input-container>
+							<input mdInput [disabled]="!validAddress" placeholder="First Name" [(ngModel)]="point.firstName"
+							       name="firstName"
+							       required/>
+						</md-input-container>
+						<md-input-container>
+							<input mdInput [disabled]="!validAddress" placeholder="Last Name" [(ngModel)]="point.lastName"
+							       name="lastName"
+							       required/>
+						</md-input-container>
+					</div>
+					<div class="column">
+						<md-input-container>
+							<input mdInput [disabled]="!validAddress" placeholder="Email" [(ngModel)]="point.email" name="email"
+							       required/>
+						</md-input-container>
+						<md-input-container>
+							<input mdInput [disabled]="!validAddress" id="contactNumberId" placeholder="Concat Number"
+							       [(ngModel)]="point.contactNumber"
+							       name="contactNumber" required/>
+						</md-input-container>
+					</div>
+					<div style="clear: both"></div>
+
+					<div class="button-hub">
+						<button type="button" md-raised-button (click)="cancel()">Cancel
+						</button>
+						<button id="save-but" [disabled]="!validAddress" type="submit" (click)="onSubmit()"
+						        md-raised-button color="primary">
+							Add point
+						</button>
+					</div>
+
+					<div style="clear: both"></div>
+				</form>
+			</div>
+
+			<div [hidden]="!submitted" style="width: 100%">
+				<h4>Added new point {{point.firstName}} {{point.lastName}}</h4>
+				<h4>Edit your data here</h4>
+				<div style="margin-bottom: 1em">
+					<a href="/point/detail/{{point._id}}" target="_blank">{{host + "/point/detail/" + point._id}}</a>
+				</div>
+				<div class="button-hub">
+					<button (click)="closePointForm()" md-raised-button color="primary">Done</button>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+		</md-card-content>
+	</md-card>
+</div>

@@ -1,0 +1,33 @@
+md-input {
+	margin: 8px 0;
+	width: 100%;
+}
+
+.form {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.column {
+	float: left;
+	margin-right: 3%;
+	width: 46%;
+}
+
+md-list, md-list-item {
+	width: 100%;
+}
+
+md-icon {
+	vertical-align: middle;
+}
+
+.button-hub {
+	float: right;
+}
