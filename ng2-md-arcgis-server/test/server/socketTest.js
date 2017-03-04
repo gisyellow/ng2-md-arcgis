@@ -2,9 +2,10 @@
  * Created by najorcruzcruz on 12/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var io = require("socket.io-client");
 var socket_1 = require("../../server/socket");
-var http = require('http');
+var http = require("http");
 var express = require("express");
 var constants_1 = require("../../app/constants");
 var assert = require('assert');
@@ -39,4 +40,3 @@ describe('Socket', function () {
         pointSocket.emitRemovePoint({ firstName: 'name' });
     });
 });
-//# sourceMappingURL=socketTest.js.map

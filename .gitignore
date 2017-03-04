@@ -2,7 +2,7 @@
 ### Node template
 # Logs
 logs
-.idea/
+*.idea/
 .DS_Store
 *.log
 npm-debug.log*

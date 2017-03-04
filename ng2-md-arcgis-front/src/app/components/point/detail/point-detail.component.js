@@ -5,19 +5,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by najorcruzcruz on 11/7/16.
  */
 /**
  * Created by najorcruzcruz on 11/7/16.
  */
-var core_1 = require('@angular/core');
-var point_1 = require('../../../models/point');
-var data_service_1 = require("../../../services/data.service.ts");
-var router_1 = require("@angular/router");
+var core_1 = require("@angular/core");
+var point_1 = require("../../../models/point");
+var data_service_1 = require("../../../services/data.service");
+var browser_1 = require("@angular/platform-browser/src/facade/browser");
 exports.CONTACT_NUMBER_PATTERN = '^(\\+|00)\\d{2}\\s\\d{3}\\s\\d{4}\\s\\d{3}$';
 exports.EMAIL_PATTERN = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$';
 var PointDetailComponent = (function () {
@@ -48,26 +46,24 @@ var PointDetailComponent = (function () {
     };
     PointDetailComponent.prototype.ngAfterViewInit = function () {
         // Workaround to Material design problem with pattern validator.
-        if (window.document.querySelector('input[name="contactNumber"]')) {
-            window.document.querySelector('input[name="contactNumber"]')
+        if (browser_1.document.querySelector('input[name="contactNumber"]')) {
+            browser_1.document.querySelector('input[name="contactNumber"]')
                 .setAttribute('pattern', exports.CONTACT_NUMBER_PATTERN);
-            window.document.querySelector('input[name="email"]')
+            browser_1.document.querySelector('input[name="email"]')
                 .setAttribute('pattern', exports.EMAIL_PATTERN);
         }
     };
     PointDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
-    PointDetailComponent = __decorate([
-        core_1.Component({
-            selector: 'point-detail',
-            templateUrl: 'app/components/point/point-detail.component.html',
-            styleUrls: ['app/components/point/point-detail.component.css'],
-            providers: [data_service_1.DataService]
-        }), 
-        __metadata('design:paramtypes', [data_service_1.DataService, router_1.ActivatedRoute, router_1.Router])
-    ], PointDetailComponent);
     return PointDetailComponent;
 }());
+PointDetailComponent = __decorate([
+    core_1.Component({
+        selector: 'point-detail',
+        templateUrl: 'point-detail.component.html',
+        styleUrls: ['point-detail.component.css'],
+        providers: [data_service_1.DataService]
+    })
+], PointDetailComponent);
 exports.PointDetailComponent = PointDetailComponent;
-//# sourceMappingURL=point-detail.component.js.map

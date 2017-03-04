@@ -2,6 +2,7 @@
  * Created by najorcruzcruz on 14/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var GeolocationServiceMock = (function () {
     function GeolocationServiceMock() {
     }
@@ -18,4 +19,3 @@ var GeolocationServiceMock = (function () {
     return GeolocationServiceMock;
 }());
 exports.GeolocationServiceMock = GeolocationServiceMock;
-//# sourceMappingURL=geolocation.service.mock.js.map

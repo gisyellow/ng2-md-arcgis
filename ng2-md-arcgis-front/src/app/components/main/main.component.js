@@ -6,22 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Created by najorcruzcruz on 11/7/16.
- */
 var core_1 = require("@angular/core");
-var Subject_1 = require("rxjs/Subject");
-var MapService = (function () {
-    function MapService() {
-        this.onMapClick = new Subject_1.Subject();
-        this.onMapClickObservable = this.onMapClick.asObservable();
+var MainComponent = (function () {
+    function MainComponent() {
     }
-    MapService.prototype.mapClickNext = function (evt) {
-        this.onMapClick.next(evt);
+    MainComponent.prototype.ngOnInit = function () {
     };
-    return MapService;
+    return MainComponent;
 }());
-MapService = __decorate([
-    core_1.Injectable()
-], MapService);
-exports.MapService = MapService;
+MainComponent = __decorate([
+    core_1.Component({
+        selector: 'app-main',
+        templateUrl: 'main.component.html',
+        styleUrls: ['main.component.css']
+    })
+], MainComponent);
+exports.MainComponent = MainComponent;

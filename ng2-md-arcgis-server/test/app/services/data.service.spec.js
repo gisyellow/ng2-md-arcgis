@@ -2,10 +2,11 @@
  * Created by najorcruzcruz on 13/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var data_service_1 = require("../../../app/services/data.service");
-var testing_1 = require('@angular/core/testing');
-var http_1 = require('@angular/http');
-var testing_2 = require('@angular/core/testing');
+var testing_1 = require("@angular/core/testing");
+var http_1 = require("@angular/http");
+var testing_2 = require("@angular/core/testing");
 var point_1 = require("../../../app/models/point");
 var http_mock_1 = require("../../mocks/http.mock");
 var geolocation_service_mock_1 = require("../../mocks/geolocation.service.mock");
@@ -95,4 +96,3 @@ describe('Data Service', function () {
         });
     });
 });
-//# sourceMappingURL=data.service.spec.js.map

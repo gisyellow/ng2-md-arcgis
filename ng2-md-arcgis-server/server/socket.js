@@ -1,5 +1,6 @@
 "use strict";
-var constants_1 = require("../app/constants");
+Object.defineProperty(exports, "__esModule", { value: true });
+var constants_1 = require("../../ng2-md-arcgis-front/src/app/common/constants");
 var PointSocket = (function () {
     function PointSocket(server, callback) {
         this.server = server;
@@ -27,4 +28,3 @@ var PointSocket = (function () {
     return PointSocket;
 }());
 exports.PointSocket = PointSocket;
-//# sourceMappingURL=socket.js.map

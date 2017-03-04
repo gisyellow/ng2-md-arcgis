@@ -2,6 +2,7 @@
  * Created by najorcruzcruz on 12/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var server_1 = require("../../server/server");
 var contantsTest_1 = require("./contantsTest");
 var databaseService_1 = require("../../server/databaseService");
@@ -145,4 +146,3 @@ describe('Server test', function () {
         });
     });
 });
-//# sourceMappingURL=serverTest.js.map

@@ -2,11 +2,12 @@
  * Created by najorcruzcruz on 11/7/16.
  */
 "use strict";
-var geolocation_service_1 = require('../../../app/services/geolocation.service');
-var testing_1 = require('@angular/core/testing');
-var http_1 = require('@angular/http');
-var testing_2 = require('@angular/core/testing');
-require('rxjs/add/operator/toPromise');
+Object.defineProperty(exports, "__esModule", { value: true });
+var geolocation_service_1 = require("../../../app/services/geolocation.service");
+var testing_1 = require("@angular/core/testing");
+var http_1 = require("@angular/http");
+var testing_2 = require("@angular/core/testing");
+require("rxjs/add/operator/toPromise");
 describe('Geolocation Service', function () {
     var geolocationService;
     beforeEach(function () { return testing_2.addProviders([
@@ -39,4 +40,3 @@ describe('Geolocation Service', function () {
         });
     }, 10000);
 });
-//# sourceMappingURL=geolocation.service.spec.js.map

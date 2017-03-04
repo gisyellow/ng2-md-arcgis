@@ -2,6 +2,7 @@
  * Created by najorcruzcruz on 13/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var contantsTest_1 = require("./contantsTest");
 var constants_1 = require("../../app/constants");
 var server_1 = require("../../server/server");
@@ -103,4 +104,3 @@ describe('Server Socket test', function () {
         });
     });
 });
-//# sourceMappingURL=serverSocketTest.js.map

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by najorcruzcruz on 7/7/16.
  */
@@ -54,4 +55,3 @@ var DatabaseService = (function () {
     return DatabaseService;
 }());
 exports.DatabaseService = DatabaseService;
-//# sourceMappingURL=databaseService.js.map

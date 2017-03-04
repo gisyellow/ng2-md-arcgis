@@ -2,8 +2,9 @@
  * Created by najorcruzcruz on 12/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var databaseService_1 = require("../../server/databaseService");
-var assert = require('assert');
+var assert = require("assert");
 var contantsTest_1 = require("./contantsTest");
 var utils_1 = require("../../server/utils");
 describe('Data Service', function () {
@@ -103,4 +104,3 @@ describe('Data Service', function () {
         });
     });
 });
-//# sourceMappingURL=dataServiceTest.js.map

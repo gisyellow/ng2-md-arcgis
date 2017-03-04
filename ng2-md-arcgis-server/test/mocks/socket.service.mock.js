@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var Rx_1 = require("rxjs/Rx");
 /**
  * Created by najorcruzcruz on 13/7/16.
@@ -15,4 +16,3 @@ var SocketServiceMock = (function () {
     return SocketServiceMock;
 }());
 exports.SocketServiceMock = SocketServiceMock;
-//# sourceMappingURL=socket.service.mock.js.map

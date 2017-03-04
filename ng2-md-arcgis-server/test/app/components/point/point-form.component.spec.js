@@ -1,10 +1,11 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by najorcruzcruz on 11/7/16.
  */
-var point_form_component_1 = require('../../../../app/components/point/point-form.component');
-var testing_1 = require('@angular/core/testing');
-var testing_2 = require('@angular/compiler/testing');
+var point_form_component_1 = require("../../../../app/components/point/point-form.component");
+var testing_1 = require("@angular/core/testing");
+var testing_2 = require("@angular/compiler/testing");
 var point_1 = require("../../../../app/models/point");
 var http_mock_1 = require("../../../mocks/http.mock");
 var socket_service_mock_1 = require("../../../mocks/socket.service.mock");
@@ -105,4 +106,3 @@ describe('Point Form Component', function () {
         input.value = value;
     }
 });
-//# sourceMappingURL=point-form.component.spec.js.map

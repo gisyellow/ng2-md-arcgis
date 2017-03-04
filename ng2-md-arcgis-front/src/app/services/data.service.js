@@ -8,41 +8,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var core_1 = require('@angular/core');
-var http_1 = require("@angular/http");
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
 var DataService = (function () {
     function DataService(http) {
         this.http = http;
+        this.BASE_REST_URL = 'http://localhost:3000/api/';
     }
     DataService.prototype.getPoints = function () {
-        return this.http.get('/api/points')
+        return this.http.get(this.BASE_REST_URL + 'points')
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     DataService.prototype.getPoint = function (id) {
-        return this.http.get("/api/points/" + id)
+        return this.http.get(this.BASE_REST_URL + ("points/" + id))
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     DataService.prototype.savePoint = function (point) {
-        return this.http.post('/api/points/', point)
+        return this.http.post(this.BASE_REST_URL + 'points/', point)
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     DataService.prototype.updatePoint = function (point) {
-        return this.http.put("/api/points/" + point._id, point)
+        return this.http.put(this.BASE_REST_URL + ("points/" + point._id), point)
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     DataService.prototype.deletePoint = function (point) {
-        return this.http.delete("/api/points/" + point._id)
+        return this.http.delete(this.BASE_REST_URL + ("points/" + point._id))
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);
@@ -50,11 +48,9 @@ var DataService = (function () {
     DataService.prototype.handleError = function (error) {
         console.error(error);
     };
-    DataService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], DataService);
     return DataService;
 }());
+DataService = __decorate([
+    core_1.Injectable()
+], DataService);
 exports.DataService = DataService;
-//# sourceMappingURL=data.service.js.map

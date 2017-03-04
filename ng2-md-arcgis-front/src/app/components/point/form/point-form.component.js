@@ -5,17 +5,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by najorcruzcruz on 11/7/16.
  */
-var core_1 = require('@angular/core');
-var point_1 = require('../../../models/point');
-var map_service_1 = require('../../../services/map.service.ts');
-var geolocation_service_1 = require('../../../services/geolocation.service.ts');
-var data_service_1 = require("../../../services/data.service.ts");
+var core_1 = require("@angular/core");
+var point_1 = require("../../../models/point");
+var geolocation_service_1 = require("../../../services/geolocation.service");
+var data_service_1 = require("../../../services/data.service");
 exports.CONTACT_NUMBER_PATTERN = '^(\\+|00)\\d{2}\\s\\d{3}\\s\\d{4}\\s\\d{3}$';
 exports.EMAIL_PATTERN = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}$';
 var PointFormComponent = (function () {
@@ -97,16 +94,14 @@ var PointFormComponent = (function () {
     PointFormComponent.prototype.ngOnDestroy = function () {
         this.mapClickSubscribe.unsubscribe();
     };
-    PointFormComponent = __decorate([
-        core_1.Component({
-            selector: 'point-form',
-            templateUrl: 'app/components/point/point-form.component.html',
-            styleUrls: ['app/components/point/point-form.component.css'],
-            providers: [geolocation_service_1.GeolocationService, data_service_1.DataService]
-        }), 
-        __metadata('design:paramtypes', [map_service_1.MapService, geolocation_service_1.GeolocationService, data_service_1.DataService])
-    ], PointFormComponent);
     return PointFormComponent;
 }());
+PointFormComponent = __decorate([
+    core_1.Component({
+        selector: 'point-form',
+        templateUrl: 'point-form.component.html',
+        styleUrls: ['point-form.component.css'],
+        providers: [geolocation_service_1.GeolocationService, data_service_1.DataService]
+    })
+], PointFormComponent);
 exports.PointFormComponent = PointFormComponent;
-//# sourceMappingURL=point-form.component.js.map

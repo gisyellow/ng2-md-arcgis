@@ -2,6 +2,7 @@
  * Created by najorcruzcruz on 13/7/16.
  */
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var HttpMock = (function () {
     function HttpMock() {
         var _this = this;
@@ -35,4 +36,3 @@ var HttpMock = (function () {
     return HttpMock;
 }());
 exports.HttpMock = HttpMock;
-//# sourceMappingURL=http.mock.js.map

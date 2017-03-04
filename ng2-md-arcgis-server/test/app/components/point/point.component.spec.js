@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var testing_1 = require("@angular/core/testing");
 var http_1 = require("@angular/http");
 var point_component_1 = require("../../../../app/components/point/point.component");
@@ -74,4 +75,3 @@ describe('Point Component', function () {
         });
     })));
 });
-//# sourceMappingURL=point.component.spec.js.map

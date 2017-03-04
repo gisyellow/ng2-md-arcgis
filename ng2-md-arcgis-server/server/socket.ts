@@ -1,9 +1,8 @@
 /**
  * Created by najorcruzcruz on 8/7/16.
  */
-import socketIo = require('socket.io');
 import { Server } from "http";
-import { EMIT_NEW_POINT, EMIT_UPDATED_POINT, EMIT_REMOVED_POINT } from "../app/constants";
+import { EMIT_NEW_POINT, EMIT_UPDATED_POINT, EMIT_REMOVED_POINT } from "../../ng2-md-arcgis-front/src/app/common/constants";
 
 export class PointSocket {
     io: any;

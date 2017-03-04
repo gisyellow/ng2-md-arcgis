@@ -1,0 +1,26 @@
+{
+  "name": "ng2-md-arcgis-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.5",
+    "socket.io": "^1.7.3",
+    "tslint": "^4.5.0",
+    "typescript": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.5",
+    "typescript": "^2.2.1"
+  }
+}

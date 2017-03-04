@@ -13,4 +13,3 @@
 //         return Promise.resolve(this.heroes);
 //     }
 // } 
-//# sourceMappingURL=hero.service.mock.js.map
