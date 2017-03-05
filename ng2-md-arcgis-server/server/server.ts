@@ -116,32 +116,12 @@ export class NodeServer {
 
     initDevMode() {
         this.dataService.connect(this.config.mongodb.test.url);
-        // this.app.use('/system-config.js', express.static(path.normalize(__dirname + '/../system-config.js')));
-        // this.app.use('/app', express.static(path.normalize(__dirname + '/../app')));
-        // this.app.use('/node_modules', express.static(path.normalize(__dirname + '/../node_modules')));
-        // this.app.use('/assets/lib/arcgis.js', express.static(path.normalize(__dirname + '/../assets/lib/arcgis.js')));
-        // this.app.use('/assets/img/', express.static(path.normalize(__dirname + '/../assets/img')));
-        // this.app.use('/assets/img/', express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
-
-        // var renderIndex = (req: any, res: any) => {
-        //     res.sendFile(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist/'));
-        // };
-        //
-        // this.app.get('/*', renderIndex);
-        // this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
+        this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
     }
 
     initDist() {
         this.dataService.connect(this.config.mongodb.prod.url);
-        // this.app.use('/systemjs.config.js', express.static(path.normalize(__dirname + '/../dist/systemjs.config.js')));
-        // this.app.use('/app', express.static(path.normalize(__dirname + '/../dist/app')));
-        // this.app.use('/lib', express.static(path.normalize(__dirname + '/../dist/lib')));
-        //
-        // var renderIndex = (req: any, res: any) => {
-        //     res.sendFile(path.normalize(__dirname + '/../dist/index.html'));
-        // };
-        //
-        // this.app.get('/*', renderIndex);
+        this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
     }
 }
 

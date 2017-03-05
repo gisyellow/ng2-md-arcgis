@@ -4,6 +4,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * Created by najorcruzcruz on 7/7/16.
  */
 var express = require("express");
+var path = require("path");
 var databaseService_1 = require("./databaseService");
 var socket_1 = require("./socket");
 var http = require("http");
@@ -92,30 +93,11 @@ var NodeServer = (function () {
     };
     NodeServer.prototype.initDevMode = function () {
         this.dataService.connect(this.config.mongodb.test.url);
-        // this.app.use('/system-config.js', express.static(path.normalize(__dirname + '/../system-config.js')));
-        // this.app.use('/app', express.static(path.normalize(__dirname + '/../app')));
-        // this.app.use('/node_modules', express.static(path.normalize(__dirname + '/../node_modules')));
-        // this.app.use('/assets/lib/arcgis.js', express.static(path.normalize(__dirname + '/../assets/lib/arcgis.js')));
-        // this.app.use('/assets/img/', express.static(path.normalize(__dirname + '/../assets/img')));
-        // this.app.use('/assets/img/', express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
-        // var renderIndex = (req: any, res: any) => {
-        //     res.sendFile(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist/'));
-        // };
-        //
-        // this.app.get('/*', renderIndex);
-        // this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
+        this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
     };
     NodeServer.prototype.initDist = function () {
         this.dataService.connect(this.config.mongodb.prod.url);
-        // this.app.use('/systemjs.config.js', express.static(path.normalize(__dirname + '/../dist/systemjs.config.js')));
-        // this.app.use('/app', express.static(path.normalize(__dirname + '/../dist/app')));
-        // this.app.use('/lib', express.static(path.normalize(__dirname + '/../dist/lib')));
-        //
-        // var renderIndex = (req: any, res: any) => {
-        //     res.sendFile(path.normalize(__dirname + '/../dist/index.html'));
-        // };
-        //
-        // this.app.get('/*', renderIndex);
+        this.app.use(express.static(path.normalize(__dirname + '/../../ng2-md-arcgis-front/dist')));
     };
     return NodeServer;
 }());
