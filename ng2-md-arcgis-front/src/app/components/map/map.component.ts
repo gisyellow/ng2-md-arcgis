@@ -64,7 +64,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
                         this.mapService.mapClickNext(evt);
                     }
                 },
-                coords: {}
+                coords: undefined
             };
 
             this.geolocationService.getLocation()
@@ -72,6 +72,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
                     opts.coords = coords;
                     ARCGIS_MODULE.load(opts);
                 }).catch((error: any) => {
+                console.error(error);
                 ARCGIS_MODULE.load(opts);
             });
         });

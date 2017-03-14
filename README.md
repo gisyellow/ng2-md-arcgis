@@ -11,3 +11,10 @@ Run `ng serve` in the ng2-md-arcgis-front project. Navigate to `http://localhost
 ## Productiom server
 Run `ng build` in ng2-md-arcgis-front project to create a distribution
 Run `node app.js` in the ng2-md-arcgis-server project and navigate to `http://localhost:3000/`.
+
+## Cautions
+This project uses:
+<ul>
+<li><a href="https://js.arcgis.com/4.0/">ArcGIS Javascript 4.0</a></li>
+<li>Browser geolocation</li>
+</ul>
